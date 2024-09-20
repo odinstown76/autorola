@@ -13,7 +13,7 @@ use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\JsonResponse;
 use RuntimeException;
 
-readonly class UpdateCarController
+final readonly class UpdateCarController
 {
     public function __construct(
         private UpdateCarService $service,
