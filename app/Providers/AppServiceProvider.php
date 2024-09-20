@@ -25,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->app->bind(CarRepository::class, CarRepositoryUsesInMemory::class);
+        $this->app->bind(SimpleUuidFactory::class, SimpleUuidFactoryUsingRamsey::class);
         $this->app->bind(SimpleUuidInterFace::class, SimpleUuidUsingRamsey::class);
     }
 }
